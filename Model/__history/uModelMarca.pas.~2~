@@ -1,0 +1,13 @@
+unit uModelMarca;
+
+interface
+
+type
+  TModelMarca = class
+    private
+    public
+  end;
+
+implementation
+
+end.

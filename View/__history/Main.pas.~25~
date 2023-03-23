@@ -1,0 +1,53 @@
+unit Main;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIRegClasses, uniGUIForm, uniButton, uniLabel,
+  uniEdit, uniGUIBaseClasses, uniTabControl, Vcl.Menus, uniMainMenu,
+  uViewCadCliente;
+
+type
+  TMainForm = class(TUniForm)
+    UniMainMenu1: TUniMainMenu;
+    Cadastros1: TUniMenuItem;
+    miCadClientes: TUniMenuItem;
+    miCadProdutos: TUniMenuItem;
+    esteSistemas1: TUniMenuItem;
+    Modulos1: TUniMenuItem;
+    Vender1: TUniMenuItem;
+    procedure miCadClientesClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function MainForm: TMainForm;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  uniGUIVars, MainModule, uniGUIApplication,
+  uControllerCliente, uControllerConexao, uEnumCrud;
+
+function MainForm: TMainForm;
+begin
+  Result := TMainForm(UniMainModule.GetFormInstance(TMainForm));
+end;
+
+procedure TMainForm.miCadClientesClick(Sender: TObject);
+begin
+  TViewCadClientes.Create(UniApplication);
+
+
+end;
+
+initialization
+  RegisterAppFormClass(TMainForm);
+
+end.

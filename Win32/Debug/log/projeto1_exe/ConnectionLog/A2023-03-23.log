@@ -1,0 +1,5 @@
+Projeto1.exe: 000027E8: 11:23:31 [127.0.0.1]:Sequence Error Timeout : TDiff:27328, Event: activate, Expected: 20, Received: 21, [Q7NxxNNKMx10C457B2A]
+Projeto1.exe: 000027E8: 11:23:31 [127.0.0.1]:Failed Sequence Reset to: 20
+Projeto1.exe: 00006450: 11:23:31 [127.0.0.1]:Sequence Error Timeout : TDiff:16516, Event: click, Expected: 21, Received: 22, [Q7NxxNNKMx10C457B2A]
+Projeto1.exe: 00006450: 11:23:31 [127.0.0.1]:Failed Sequence Reset to: 21
+Projeto1.exe: 000042D8: 11:23:34 [127.0.0.1]:Sequence Error Timeout : TDiff:15047, Event: deactivate, Expected: 21, Received: 23, [Q7NxxNNKMx10C457B2A]

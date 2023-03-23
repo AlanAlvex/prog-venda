@@ -1,0 +1,33 @@
+unit uViewCadProdutos;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIForm, uniGUIBaseClasses, uniTabControl;
+
+type
+  TViewCadProdutos = class(TUniForm)
+    UniTabControl1: TUniTabControl;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function ViewCadProdutos: TViewCadProdutos;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function ViewCadProdutos: TViewCadProdutos;
+begin
+  Result := TViewCadProdutos(UniMainModule.GetFormInstance(TViewCadProdutos));
+end;
+
+end.

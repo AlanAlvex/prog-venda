@@ -1,0 +1,37 @@
+unit uViewCadMarca;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIForm, uniButton, uniEdit, uniGUIBaseClasses,
+  uniLabel;
+
+type
+  TViewCadMarca = class(TUniForm)
+    UniLabel1: TUniLabel;
+    UniLabel2: TUniLabel;
+    edDescricao: TUniEdit;
+    btSalvar: TUniButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function ViewCadMarca: TViewCadMarca;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function ViewCadMarca: TViewCadMarca;
+begin
+  Result := TViewCadMarca(UniMainModule.GetFormInstance(TViewCadMarca));
+end;
+
+end.

@@ -1,0 +1,157 @@
+unit uModelCliente;
+
+interface
+
+uses
+  SysUtils, uEnumCrud,
+  FireDAC.Comp.Client, System.RTTI, System.Variants, Vcl.Dialogs, System.typInfo;
+
+type
+  TValidador = class(TCustomAttribute)
+    private
+      FDescricao: string;
+    public
+      constructor Create (const Descricao: string);
+      property Descricao: string read FDescricao;
+
+      function ValidarValor (Propriedade: TRttiProperty; Objeto: TObject): Boolean;
+
+
+  end;
+
+type
+  TModelCliente = class
+    private
+      FId       :Integer;
+      FNome     :string;
+      FCPF      :string;
+      FCEP      :string;
+      FEndereco :string;
+      FTelefone :string;
+      FDTNasc   :TDate;
+      FDTCad    :TDateTime;
+      FEnum     :TEnum;
+      FAlerta   :WideString;
+
+    public
+      property intId   : Integer read FId write FId;
+
+      [TValidador('Nome do cliente')]
+      property strNome : string read Fnome write FNome;
+      [TValidador('CPF do cliente')]
+      property strCPF  : string read FCPF write FCPF;
+
+      property strCEP  : string read FCEP write FCEP;
+      property strEndereco : string read FEndereco write FEndereco;
+
+      [TValidador('Telefone do cliente')]
+      property strTelefone : string read Ftelefone write FTelefone;
+
+      property dtNasc : TDate read FDTNasc write FDTNasc;
+      property dtCad  : TDateTime read FDTCad write FDTCad;
+      property enInExDl : TEnum read FEnum write FEnum;
+      property widAlerta : WideString read FAlerta write FAlerta;
+
+      function persist :Boolean;
+      function selecionar: TFDQuery;
+      procedure ValidaDados;
+  end;
+
+
+implementation
+
+uses uDAOCliente;
+
+{ TModelCliente }
+
+function TModelCliente.persist: Boolean;
+var
+  daoCliente: TDAOCliente;
+begin
+  Result := False;
+  Self.widAlerta := '';
+  daoCliente := TDAOCliente.Create;
+
+  if Self.enInExDl <> tExcluir then
+    ValidaDados;
+
+  try
+    case FEnum of
+      tIncluir:
+        Result := daoCliente.incluir(Self);
+      tAlterar:
+        Result := daoCliente.alterar(Self);
+      tExcluir:
+        Result := daoCliente.excluir(Self)
+    end;
+
+  finally
+    FreeAndNil(daoCliente);
+  end;
+end;
+
+function TModelCliente.selecionar: TFDQuery;
+var
+  daoCliente: TDAOCliente;
+begin
+  daoCliente := TDAOCliente.Create;
+  try
+    Result := daoCliente.selecionarCliente;
+  finally
+    FreeAndNil(daoCliente);
+  end;
+end;
+
+procedure TModelCliente.ValidaDados;
+var
+  Contexto    :TRttiContext;
+  Tipo        :TRttiType;
+  Propriedade :TRttiProperty;
+  Atributo    :TCustomAttribute;
+begin
+
+  Contexto := TRttiContext.Create;
+
+  Tipo := Contexto.GetType(TModelCliente.ClassInfo);
+
+  Self.widAlerta := '';
+    // Percorre os atributos da propriedade
+  for Propriedade in Tipo.GetProperties do
+  begin
+    for Propriedade in Tipo.GetAttributes do
+    begin
+      // Se o atributo for do tipo da descrição
+      if Atributo is TValidador then
+      begin
+        if not TValidador(Atributo).ValidarValor(Propriedade, Self) then
+        begin
+          if Self.widAlerta = '' then
+            Self.widAlerta := 'Valor não preenchido:' + #13#10;
+
+          Self.widAlerta := Self.widAlerta + (Atributo as TValidador).Descricao + #13#10;
+        end;
+      end;
+    end;
+  end;
+end;
+
+{ TValidador }
+
+constructor TValidador.Create(const Descricao: string);
+begin
+  FDescricao := Descricao;
+end;
+
+function TValidador.ValidarValor(Propriedade: TRttiProperty;
+  Objeto: TObject): Boolean;
+var
+  Valor: Variant;
+begin
+  //Pegar o valor da propriedade
+  Valor := Propriedade.GetValue(Objeto).AsVariant;
+
+  //Valida o valor, exigindo que seja diferente de 0 e diferente de vazio
+  Result := (VarToStr(Valor) <> EmptyStr) and (VarToStr(Valor) <> '0')
+end;
+
+end.

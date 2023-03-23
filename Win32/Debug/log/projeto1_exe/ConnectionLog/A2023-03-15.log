@@ -1,0 +1,23 @@
+Projeto1.exe: 00004454: 10:21:48 [127.0.0.1]:Failed Sequence Recovery: SeqId: 11, Event: click
+Projeto1.exe: 00004454: 10:21:48 [127.0.0.1]:Sequence sent from cache:  SeqId: 11
+Projeto1.exe: 00004454: 10:21:48 [127.0.0.1]:Processed: Id: 11, Evt: click, [edzVFrjFwu10C39357C]
+Projeto1.exe: 000067F0: 10:36:44 [127.0.0.1]:Failed Sequence Recovery: SeqId: 17, Event: click
+Projeto1.exe: 0000441C: 10:39:14 [127.0.0.1]:Sequence Error Timeout : TDiff:28719, Event: click, Expected: 15, Received: 16, [1f5Du3zfLY10C393A32]
+Projeto1.exe: 0000441C: 10:39:14 [127.0.0.1]:Failed Sequence Reset to: 15
+Projeto1.exe: 00005EA4: 10:39:15 [127.0.0.1]:Failed Sequence Recovery: SeqId: 14, Event: click
+Projeto1.exe: 00006450: 10:39:15 [127.0.0.1]:Failed Sequence Recovery: SeqId: 16, Event: click
+Projeto1.exe: 000021EC: 10:39:16 [127.0.0.1]:Sequence Error Timeout : TDiff:22219, Event: deactivate, Expected: 16, Received: 17, [1f5Du3zfLY10C393A32]
+Projeto1.exe: 000021EC: 10:39:16 [127.0.0.1]:Failed Sequence Reset to: 16
+Projeto1.exe: 00005EA4: 10:39:16 [127.0.0.1]:Sequence sent from cache:  SeqId: 14
+Projeto1.exe: 00005EA4: 10:39:16 [127.0.0.1]:Processed: Id: 14, Evt: click, [1f5Du3zfLY10C393A32]
+Projeto1.exe: 00006450: 10:39:16 [127.0.0.1]:Processing: Id: 16, Evt: click
+Projeto1.exe: 00002788: 10:39:16 [127.0.0.1]:Failed Sequence Recovery: SeqId: 15, Event: click
+Projeto1.exe: 00006348: 10:39:16 [127.0.0.1]:Failed Sequence Recovery: SeqId: 17, Event: deactivate
+Projeto1.exe: 00006450: 10:39:17 [127.0.0.1]:Processed: Id: 16, Evt: click, [1f5Du3zfLY10C393A32]
+Projeto1.exe: 00002788: 10:39:17 [127.0.0.1]:Sequence sent from cache:  SeqId: 15
+Projeto1.exe: 00002788: 10:39:17 [127.0.0.1]:Processed: Id: 15, Evt: click, [1f5Du3zfLY10C393A32]
+Projeto1.exe: 00006348: 10:39:17 [127.0.0.1]:Processing: Id: 17, Evt: deactivate
+Projeto1.exe: 00006348: 10:39:17 [127.0.0.1]:Processed: Id: 17, Evt: deactivate, [1f5Du3zfLY10C393A32]
+Projeto1.exe: 000064A8: 11:25:10 [127.0.0.1]:Failed Sequence Recovery: SeqId: 21, Event: click
+Projeto1.exe: 000064A8: 11:25:10 [127.0.0.1]:Sequence sent from cache:  SeqId: 21
+Projeto1.exe: 000064A8: 11:25:10 [127.0.0.1]:Processed: Id: 21, Evt: click, [ts3cPnSN2910C394674]

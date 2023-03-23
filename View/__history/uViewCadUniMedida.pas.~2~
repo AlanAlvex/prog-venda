@@ -1,0 +1,37 @@
+unit uViewCadUniMedida;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIForm, uniButton, uniEdit, uniGUIBaseClasses,
+  uniLabel;
+
+type
+  TViewCadUniMedida = class(TUniForm)
+    lbCodigo: TUniLabel;
+    lbDescricao: TUniLabel;
+    edUniMedida: TUniEdit;
+    btSalvar: TUniButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function ViewCadUniMedida: TViewCadUniMedida;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function ViewCadUniMedida: TViewCadUniMedida;
+begin
+  Result := TViewCadUniMedida(UniMainModule.GetFormInstance(TViewCadUniMedida));
+end;
+
+end.

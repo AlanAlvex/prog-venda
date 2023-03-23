@@ -1,0 +1,50 @@
+unit uViewCadProdutos;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIForm, uniGUIBaseClasses, uniTabControl,
+  uniMultiItem, uniComboBox, uniButton, uniEdit, uniLabel;
+
+type
+  TViewCadProdutos = class(TUniForm)
+    tcProdutos: TUniTabControl;
+    lbCodProduto: TUniLabel;
+    lbDescricaoProd: TUniLabel;
+    edDescricaoProd: TUniEdit;
+    lbQuantidade: TUniLabel;
+    neQuantidade: TUniNumberEdit;
+    lbCodBarra: TUniLabel;
+    edCodBarra: TUniEdit;
+    lvValorCusto: TUniLabel;
+    UniNumberEdit2: TUniNumberEdit;
+    btAdicionar: TUniButton;
+    lvValorVenda: TUniLabel;
+    UniNumberEdit1: TUniNumberEdit;
+    UniLabel1: TUniLabel;
+    lbUnidMed: TUniLabel;
+    UniComboBox1: TUniComboBox;
+    UniComboBox2: TUniComboBox;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function ViewCadProdutos: TViewCadProdutos;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function ViewCadProdutos: TViewCadProdutos;
+begin
+  Result := TViewCadProdutos(UniMainModule.GetFormInstance(TViewCadProdutos));
+end;
+
+end.

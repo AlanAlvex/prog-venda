@@ -1,0 +1,58 @@
+unit uClassCliente;
+
+interface
+
+uses
+  FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
+  FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
+  FireDAC.VCLUI.Wait, Data.DB, FireDAC.Comp.Client, SysUtils, uControllerConexao;
+
+type
+  TModelCliente = class
+    private
+      FId       :Integer;
+      FNome     :string;
+      FCPF      :string;
+      FCEP      :string;
+      FEndereco :string;
+      FTelefone :string;
+      FDTNasc   :TDate;
+      FDTCad    :TDateTime;
+    public
+      property intId   : Integer read FId write FId;
+      property strNome : string read Fnome write FNome;
+      property strCPF  : string read FCPF write FCPF;
+      property strCEP  : string read FCEP write FCEP;
+      property strEndereco : string read FEndereco write FEndereco;
+      property strTelefone : string read Ftelefone write FTelefone;
+      property dtNasc : TDate read FDTNasc write FDTNasc;
+      property dtCad  : TDateTime read FDTCad write FDTCad;
+
+      function SalvarCliente : Boolean;
+  end;
+
+implementation
+
+{ TModelCliente }
+
+function TModelCliente.SalvarCliente: Boolean;
+var
+  qrCliente : TFDQuery;
+begin
+  qrCliente := TControllerConexao.getInstanse.daoConexao.getQuery;
+  try
+    try
+      qrCliente.ExecSQL('INSERT INTO (NOME,CPF,CEP,ENDERECO,TELEFONE)'+
+                        'VALUES("'+Self.strNome+'","'+Self.strCPF+'","'+Self.strCEP+'",'
+                        +'"'+Self.strEndereco+'","'+Self.strTelefone+'")');
+
+      Result := True;
+    except
+
+    end;
+  finally
+
+  end;
+end;
+
+end.

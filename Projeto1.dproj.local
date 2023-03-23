@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/03/04 16:36:32.000.848,=C:\Users\alan_\Desktop\projeto\Main.pas</Transaction>
+    <Transaction>2023/03/04 16:36:32.000.584,=C:\Users\alan_\Desktop\projeto\MainModule.pas</Transaction>
+    <Transaction>2023/03/04 16:36:32.000.499,=C:\Users\alan_\Desktop\projeto\ServerModule.pas</Transaction>
+    <Transaction>2023/03/04 16:36:58.000.975,C:\Users\alan_\Desktop\projeto\Main.pas=</Transaction>
+    <Transaction>2023/03/04 16:37:06.000.800,=C:\Users\alan_\Desktop\projeto\View\Main.pas</Transaction>
+    <Transaction>2023/03/04 16:37:23.000.549,=C:\Users\alan_\Desktop\projeto\Model\uModelCliente.pas</Transaction>
+    <Transaction>2023/03/04 16:37:23.000.539,=C:\Users\alan_\Desktop\projeto\Model\uEnumCrud.pas</Transaction>
+    <Transaction>2023/03/04 16:37:29.000.737,=C:\Users\alan_\Desktop\projeto\DAO\uDAOCliente.pas</Transaction>
+    <Transaction>2023/03/04 16:37:29.000.749,=C:\Users\alan_\Desktop\projeto\DAO\uDAOconexao.pas</Transaction>
+    <Transaction>2023/03/04 16:37:34.000.334,=C:\Users\alan_\Desktop\projeto\Controller\uControllerCliente.pas</Transaction>
+    <Transaction>2023/03/04 16:37:34.000.345,=C:\Users\alan_\Desktop\projeto\Controller\uControllerConexao.pas</Transaction>
+    <Transaction>2023/03/04 19:11:20.000.961,=C:\Users\alan_\Desktop\projeto\Unit1.pas</Transaction>
+    <Transaction>2023/03/04 19:21:16.000.574,C:\Users\alan_\Desktop\projeto\Unit1.pas=C:\Users\alan_\Desktop\projeto\View\uViewCadCliente.pas</Transaction>
+    <Transaction>2023/03/04 19:21:16.000.574,C:\Users\alan_\Desktop\projeto\Unit1.dfm=C:\Users\alan_\Desktop\projeto\View\uViewCadCliente.dfm</Transaction>
+    <Transaction>2023/03/04 19:59:42.000.168,=C:\Users\alan_\Desktop\projeto\Unit1.pas</Transaction>
+    <Transaction>2023/03/04 20:06:29.000.183,C:\Users\alan_\Desktop\projeto\Unit1.dfm=C:\Users\alan_\Desktop\projeto\View\uViewCadProdutos.dfm</Transaction>
+    <Transaction>2023/03/04 20:06:29.000.183,C:\Users\alan_\Desktop\projeto\Unit1.pas=C:\Users\alan_\Desktop\projeto\View\uViewCadProdutos.pas</Transaction>
+    <Transaction>2023/03/06 17:19:11.000.849,=C:\Users\alan_\Desktop\projeto\Unit1.pas</Transaction>
+    <Transaction>2023/03/06 17:25:44.000.566,C:\Users\alan_\Desktop\projeto\View\uViewCadMarca.pas=C:\Users\alan_\Desktop\projeto\Unit1.pas</Transaction>
+    <Transaction>2023/03/06 17:25:44.000.566,C:\Users\alan_\Desktop\projeto\View\uViewCadMarca.dfm=C:\Users\alan_\Desktop\projeto\Unit1.dfm</Transaction>
+    <Transaction>2023/03/06 17:26:00.000.952,=C:\Users\alan_\Desktop\projeto\Unit1.pas</Transaction>
+    <Transaction>2023/03/06 17:35:45.000.449,C:\Users\alan_\Desktop\projeto\View\uViewCadUniMedida.dfm=C:\Users\alan_\Desktop\projeto\Unit1.dfm</Transaction>
+    <Transaction>2023/03/06 17:35:45.000.449,C:\Users\alan_\Desktop\projeto\View\uViewCadUniMedida.pas=C:\Users\alan_\Desktop\projeto\Unit1.pas</Transaction>
+    <Transaction>2023/03/15 10:57:23.000.606,=C:\Users\alan_\Desktop\projeto\Unit1.pas</Transaction>
+    <Transaction>2023/03/15 10:58:34.000.751,C:\Users\alan_\Desktop\projeto\Unit1.pas=C:\Users\alan_\Desktop\projeto\ClassFunctions\uFunctionValidaClasse.pas</Transaction>
+    <Transaction>2023/03/21 18:12:45.457,=C:\Users\alan_\Desktop\projeto\Unit1.pas</Transaction>
+    <Transaction>2023/03/22 15:14:08.797,=C:\Users\alan_\Desktop\projeto\Unit1.pas</Transaction>
+    <Transaction>2023/03/22 15:14:33.758,C:\Users\alan_\Desktop\projeto\Controller\uControllerMarca.pas=C:\Users\alan_\Desktop\projeto\Unit1.pas</Transaction>
+    <Transaction>2023/03/22 15:15:30.580,=C:\Users\alan_\Desktop\projeto\Unit1.pas</Transaction>
+    <Transaction>2023/03/22 15:15:54.455,C:\Users\alan_\Desktop\projeto\Model\uModelMarca.pas=C:\Users\alan_\Desktop\projeto\Unit1.pas</Transaction>
+    <Transaction>2023/03/22 15:16:59.279,=C:\Users\alan_\Desktop\projeto\Unit1.pas</Transaction>
+    <Transaction>2023/03/22 15:17:58.119,C:\Users\alan_\Desktop\projeto\DAO\uDAOMarca.pas=C:\Users\alan_\Desktop\projeto\Unit1.pas</Transaction>
+    <Transaction>2023/03/22 18:02:16.529,=C:\Users\alan_\Desktop\projeto\Unit1.pas</Transaction>
+    <Transaction>2023/03/22 18:02:56.149,C:\Users\alan_\Desktop\projeto\DAO\uDAOUnidadeMed.pas=C:\Users\alan_\Desktop\projeto\Unit1.pas</Transaction>
+    <Transaction>2023/03/22 18:04:45.711,=C:\Users\alan_\Desktop\projeto\Unit1.pas</Transaction>
+    <Transaction>2023/03/22 18:05:14.456,C:\Users\alan_\Desktop\projeto\Model\uModelUnidadeMed.pas=C:\Users\alan_\Desktop\projeto\Unit1.pas</Transaction>
+    <Transaction>2023/03/22 18:29:45.022,=C:\Users\alan_\Desktop\projeto\Unit1.pas</Transaction>
+    <Transaction>2023/03/22 18:30:14.766,C:\Users\alan_\Desktop\projeto\Controller\uControllerUnidadeMed.pas=C:\Users\alan_\Desktop\projeto\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

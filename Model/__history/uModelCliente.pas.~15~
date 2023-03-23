@@ -1,0 +1,97 @@
+unit uModelCliente;
+
+interface
+
+uses
+  SysUtils, uEnumCrud,
+  FireDAC.Comp.Client;
+
+type
+  TModelCliente = class
+    private
+      FId       :Integer;
+      FNome     :string;
+      FCPF      :string;
+      FCEP      :string;
+      FEndereco :string;
+      FTelefone :string;
+      FDTNasc   :TDate;
+      FDTCad    :TDateTime;
+      FEnum     :TEnum;
+      FAlerta   :WideString;
+
+    public
+      property intId   : Integer read FId write FId;
+
+      [TValidador('Nome do cliente')]
+      property strNome : string read Fnome write FNome;
+      [TValidador('CPF do cliente')]
+      property strCPF  : string read FCPF write FCPF;
+
+      property strCEP  : string read FCEP write FCEP;
+      property strEndereco : string read FEndereco write FEndereco;
+
+      [TValidador('Telefone do cliente')]
+      property strTelefone : string read Ftelefone write FTelefone;
+
+      property dtNasc : TDate read FDTNasc write FDTNasc;
+      property dtCad  : TDateTime read FDTCad write FDTCad;
+      property enInExDl : TEnum read FEnum write FEnum;
+      property widAlerta : WideString read FAlerta write FAlerta;
+
+      function persist :Boolean;
+      function selecionar: TFDQuery;
+      procedure ValidaDados;
+  end;
+
+
+implementation
+
+uses uDAOCliente;
+
+{ TModelCliente }
+
+function TModelCliente.persist: Boolean;
+var
+  daoCliente: TDAOCliente;
+begin
+  Result := False;
+  Self.widAlerta := '';
+  daoCliente := TDAOCliente.Create;
+
+  if Self.enInExDl <> tExcluir then
+    ValidaDados;
+
+  try
+    if Self.widAlerta = '' then
+    begin
+      case FEnum of
+        tIncluir:
+          Result := daoCliente.incluir(Self);
+        tAlterar:
+          Result := daoCliente.alterar(Self);
+        tExcluir:
+          Result := daoCliente.excluir(Self)
+      end;
+    end;
+  finally
+    FreeAndNil(daoCliente);
+  end;
+end;
+
+function TModelCliente.selecionar: TFDQuery;
+var
+  daoCliente: TDAOCliente;
+begin
+  daoCliente := TDAOCliente.Create;
+  try
+    Result := daoCliente.selecionarCliente;
+  finally
+    FreeAndNil(daoCliente);
+  end;
+end;
+
+
+
+
+end.

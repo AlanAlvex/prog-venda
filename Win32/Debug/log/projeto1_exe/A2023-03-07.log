@@ -1,0 +1,29 @@
+Projeto1.exe: 00002448: 09:25:16 [TUniServerModule]:Shutting Down Server.
+Projeto1.exe: 00002448: 09:25:16 [TUniServerModule]:Stopping HTTP Server.
+Projeto1.exe: 00002448: 09:25:16 [TUniServerModule]:HTTP Server Stopped.
+Projeto1.exe: 00002448: 09:25:16 [TUniGUISessionManager]:Terminating Session manager.
+Projeto1.exe: 00002448: 09:25:16 [TUniGUISessionManager]:Stopping Cache Eraser...
+Projeto1.exe: 00002448: 09:25:16 [TUniGUISessionManager]:Cache Eraser Stopped.
+Projeto1.exe: 00002448: 09:25:17 [TUniGUISessionManager]:Destroying Worker Threads.
+Projeto1.exe: 00002448: 09:25:17 [TUniGUISessionManager]:Session manager terminated.
+Projeto1.exe: 00002448: 09:25:17 [TUniWebSocketStack]:Terminating...
+Projeto1.exe: 00002448: 09:25:17 [TUniGUIMessageQ]:Terminated.
+Projeto1.exe: 00002448: 09:25:17 [TUniWebSocketStack]:Terminated.
+Projeto1.exe: 00002448: 09:25:17 [TUniServerModule]:Server Shutdown Completed.
+Projeto1.exe: 00002448: 09:25:17 []:<-------------------------------------------------------------->
+Projeto1.exe: 00002448: 09:25:17 [Terminated]:Exit Code: 0
+Projeto1.exe: 000052F0: 11:13:42 []:>--------------------------------------------------------------<
+Projeto1.exe: 000052F0: 11:13:42 [TUniServerModule]:Server First Init.
+Projeto1.exe: 000052F0: 11:13:42 [TUniServerModule]:Start Path = C:\Users\alan_\Desktop\projeto\Win32\Debug\
+Projeto1.exe: 000052F0: 11:13:42 [TUniServerModule]:Debug Mode = ON
+Projeto1.exe: 000052F0: 11:13:42 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+Projeto1.exe: 000052F0: 11:13:42 [TUniServerModule]:HTTP Server Started on Port: 8077
+Projeto1.exe: 00004BF0: 11:14:02 [HandleFileRequest[127.0.0.1]]:File not found: C:\Users\alan_\Desktop\projeto\Win32\Debug\favicon.ico
+Projeto1.exe: 00004238: 18:06:11 []:>--------------------------------------------------------------<
+Projeto1.exe: 00004238: 18:06:11 [TUniServerModule]:Server First Init.
+Projeto1.exe: 00004238: 18:06:11 [TUniServerModule]:Start Path = C:\Users\alan_\Desktop\projeto\Win32\Debug\
+Projeto1.exe: 00004238: 18:06:11 [TUniServerModule]:Debug Mode = ON
+Projeto1.exe: 00004238: 18:06:11 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+Projeto1.exe: 00004238: 18:06:12 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+Projeto1.exe: 00004238: 18:06:12 [TUniServerModule]:HTTP Server Started on Port: 8077
+Projeto1.exe: 000020BC: 18:06:21 [HandleFileRequest[127.0.0.1]]:File not found: C:\Users\alan_\Desktop\projeto\Win32\Debug\favicon.ico

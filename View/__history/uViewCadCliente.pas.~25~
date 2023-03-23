@@ -1,0 +1,108 @@
+unit uViewCadCliente;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIForm, uniButton, uniLabel, uniEdit,
+  uniGUIBaseClasses, uniTabControl;
+
+type
+  TViewCadClientes = class(TUniForm)
+    tcClientes: TUniTabControl;
+    edNome: TUniEdit;
+    edCpf: TUniEdit;
+    edCep: TUniEdit;
+    edEndereco: TUniEdit;
+    edTelefone: TUniEdit;
+    edDtnascimento: TUniEdit;
+    lbCodigo: TUniLabel;
+    lbNome: TUniLabel;
+    lbCpf: TUniLabel;
+    lbCep: TUniLabel;
+    lbEndereco: TUniLabel;
+    lbTelefone: TUniLabel;
+    lbDtnascimento: TUniLabel;
+    UniLabel8: TUniLabel;
+    btSalvarCliente: TUniButton;
+    edCodigo: TUniEdit;
+    procedure btSalvarClienteClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+  function ViewCadClientes: TViewCadClientes;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication,uControllerCliente,
+  uControllerConexao, uEnumCrud;
+
+function ViewCadClientes: TViewCadClientes;
+begin
+  Result := TViewCadClientes(UniMainModule.GetFormInstance(TViewCadClientes));
+end;
+
+procedure TViewCadClientes.btSalvarClienteClick(Sender: TObject);
+var
+  ctCliente : TControllerCliente;
+  i: Integer;
+
+begin
+  ctCliente := TControllerCliente.Create;
+
+  try
+    try
+      ctCliente.ModelCliente.enInExDl    := tIncluir;
+
+      ctCliente.ModelCliente.strNome     := edNome.Text;
+      ctCliente.ModelCliente.strCPF      := edCpf.Text;
+      ctCliente.ModelCliente.strCEP      := edCep.Text;
+      ctCliente.ModelCliente.strEndereco := edEndereco.Text;
+      ctCliente.ModelCliente.strTelefone := edTelefone.Text;
+      ctCliente.ModelCliente.dtNasc      := StrToDate(edDtnascimento.Text);
+      //Cliente.dtCad       :=
+
+      if ctCliente.persist then
+        ShowMessage('Dados salvos com sucesso!')
+      else
+      begin
+        if ctCliente.ModelCliente.widAlerta = '' then
+        begin
+          Application.MessageBox('Não foi possivel realizar a operação!', '',
+            MB_OK + MB_ICONINFORMATION);
+
+        end
+        else
+        begin
+          for i := 0 to ComponentCount -1 do
+          begin
+            if ((Components[i] is TUniEdit)) and ((Components[i] as TUniEdit).Tag = 1) then
+            begin
+              (Components[i] as TUniEdit).color := $00bbbbff;
+            end
+           //   else if ((Components[i] is TMaskEdit)) and ((Components[i] as TMaskEdit).Tag = 1) then
+//            begin
+//              (Components[i] as TMaskEdit).color := $00bbbbff;
+//            end;
+          end;
+
+          ShowMessage(ctCliente.ModelCliente.widAlerta);
+        end;
+      end;
+    except
+      on E: Exception do
+
+    end;
+  finally
+    FreeAndNil(ctCliente);
+  end;
+end;
+
+end.

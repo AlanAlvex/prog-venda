@@ -1,0 +1,160 @@
+object ViewCadClientes: TViewCadClientes
+  Left = 0
+  Top = 0
+  ClientHeight = 365
+  ClientWidth = 640
+  Caption = 'ViewCadClientes'
+  OldCreateOrder = False
+  MonitoredKeys.Keys = <>
+  PixelsPerInch = 96
+  TextHeight = 13
+  object tcClientes: TUniTabControl
+    Left = 0
+    Top = 0
+    Width = 640
+    Height = 365
+    Hint = ''
+    Tabs.Strings = (
+      'Clientes')
+    Align = alClient
+    TabOrder = 0
+    object edNome: TUniEdit
+      Tag = 1
+      Left = 96
+      Top = 59
+      Width = 361
+      Hint = ''
+      Text = ''
+      TabOrder = 1
+    end
+    object edCpf: TUniEdit
+      Tag = 1
+      Left = 472
+      Top = 59
+      Width = 121
+      Hint = ''
+      Text = ''
+      TabOrder = 2
+      InputMask.Mask = '___.___.___.-__'
+      InputMask.RemoveMaskChar = False
+    end
+    object edCep: TUniEdit
+      Left = 8
+      Top = 116
+      Width = 121
+      Hint = ''
+      Text = ''
+      TabOrder = 3
+    end
+    object edEndereco: TUniEdit
+      Left = 160
+      Top = 116
+      Width = 433
+      Hint = ''
+      Text = ''
+      TabOrder = 4
+    end
+    object edTelefone: TUniEdit
+      Tag = 1
+      Left = 8
+      Top = 176
+      Width = 121
+      Hint = ''
+      Text = ''
+      TabOrder = 5
+    end
+    object edDtnascimento: TUniEdit
+      Left = 160
+      Top = 176
+      Width = 121
+      Hint = ''
+      Text = ''
+      TabOrder = 6
+    end
+    object lbCodigo: TUniLabel
+      Left = 8
+      Top = 40
+      Width = 37
+      Height = 13
+      Hint = ''
+      Caption = 'C'#243'digo:'
+      TabOrder = 7
+    end
+    object lbNome: TUniLabel
+      Tag = 1
+      Left = 96
+      Top = 40
+      Width = 27
+      Height = 13
+      Hint = ''
+      Caption = 'Nome'
+      TabOrder = 8
+    end
+    object lbCpf: TUniLabel
+      Tag = 1
+      Left = 472
+      Top = 40
+      Width = 19
+      Height = 13
+      Hint = ''
+      Caption = 'CPF'
+      TabOrder = 9
+    end
+    object lbCep: TUniLabel
+      Left = 8
+      Top = 97
+      Width = 19
+      Height = 13
+      Hint = ''
+      Caption = 'CEP'
+      TabOrder = 10
+    end
+    object lbEndereco: TUniLabel
+      Left = 160
+      Top = 97
+      Width = 45
+      Height = 13
+      Hint = ''
+      Caption = 'Endere'#231'o'
+      TabOrder = 11
+    end
+    object lbTelefone: TUniLabel
+      Tag = 1
+      Left = 8
+      Top = 157
+      Width = 42
+      Height = 13
+      Hint = ''
+      Caption = 'Telefone'
+      TabOrder = 12
+    end
+    object lbDtnascimento: TUniLabel
+      Left = 160
+      Top = 157
+      Width = 96
+      Height = 13
+      Hint = ''
+      Caption = 'Data de Nascimento'
+      TabOrder = 13
+    end
+    object UniLabel8: TUniLabel
+      Left = 24
+      Top = 301
+      Width = 89
+      Height = 13
+      Hint = ''
+      Caption = 'Data de Cadastro:'
+      TabOrder = 14
+    end
+    object btSalvarCliente: TUniButton
+      Left = 534
+      Top = 289
+      Width = 75
+      Height = 25
+      Hint = ''
+      Caption = 'Salvar'
+      TabOrder = 15
+      OnClick = btSalvarClienteClick
+    end
+  end
+end

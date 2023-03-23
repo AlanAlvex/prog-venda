@@ -1,0 +1,42 @@
+Projeto1.exe: 000056C8: 11:18:30 []:>--------------------------------------------------------------<
+Projeto1.exe: 000056C8: 11:18:30 [TUniServerModule]:Server First Init.
+Projeto1.exe: 000056C8: 11:18:30 [TUniServerModule]:Start Path = C:\Users\alan_\Desktop\projeto\Win32\Debug\
+Projeto1.exe: 000056C8: 11:18:30 [TUniServerModule]:Debug Mode = ON
+Projeto1.exe: 000056C8: 11:18:30 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+Projeto1.exe: 000056C8: 11:18:30 [TUniServerModule]:HTTP Server Started on Port: 8077
+Projeto1.exe: 00001E78: 11:22:32 []:>--------------------------------------------------------------<
+Projeto1.exe: 00001E78: 11:22:32 [TUniServerModule]:Server First Init.
+Projeto1.exe: 00001E78: 11:22:32 [TUniServerModule]:Start Path = C:\Users\alan_\Desktop\projeto\Win32\Debug\
+Projeto1.exe: 00001E78: 11:22:32 [TUniServerModule]:Debug Mode = ON
+Projeto1.exe: 00001E78: 11:22:32 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+Projeto1.exe: 00001E78: 11:22:32 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+Projeto1.exe: 00001E78: 11:22:32 [TUniServerModule]:HTTP Server Started on Port: 8077
+Projeto1.exe: 00004998: 11:22:35 [HandleFileRequest[127.0.0.1]]:File not found: C:\Users\alan_\Desktop\projeto\Win32\Debug\favicon.ico
+Projeto1.exe: 00006854: 11:25:34 []:>--------------------------------------------------------------<
+Projeto1.exe: 00006854: 11:25:34 [TUniServerModule]:Server First Init.
+Projeto1.exe: 00006854: 11:25:34 [TUniServerModule]:Start Path = C:\Users\alan_\Desktop\projeto\Win32\Debug\
+Projeto1.exe: 00006854: 11:25:34 [TUniServerModule]:Debug Mode = ON
+Projeto1.exe: 00006854: 11:25:34 [TUniGUISessionManager]:Cache erase job created, Folder count: [2]
+Projeto1.exe: 00006854: 11:25:34 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+Projeto1.exe: 00006854: 11:25:34 [TUniServerModule]:HTTP Server Started on Port: 8077
+Projeto1.exe: 00003624: 11:26:22 []:>--------------------------------------------------------------<
+Projeto1.exe: 00003624: 11:26:22 [TUniServerModule]:Server First Init.
+Projeto1.exe: 00003624: 11:26:22 [TUniServerModule]:Start Path = C:\Users\alan_\Desktop\projeto\Win32\Debug\
+Projeto1.exe: 00003624: 11:26:22 [TUniServerModule]:Debug Mode = ON
+Projeto1.exe: 00003624: 11:26:22 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+Projeto1.exe: 00003624: 11:26:22 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+Projeto1.exe: 00003624: 11:26:22 [TUniServerModule]:HTTP Server Started on Port: 8077
+Projeto1.exe: 00006768: 11:27:07 []:>--------------------------------------------------------------<
+Projeto1.exe: 00006768: 11:27:07 [TUniServerModule]:Server First Init.
+Projeto1.exe: 00006768: 11:27:07 [TUniServerModule]:Start Path = C:\Users\alan_\Desktop\projeto\Win32\Debug\
+Projeto1.exe: 00006768: 11:27:07 [TUniServerModule]:Debug Mode = ON
+Projeto1.exe: 00006768: 11:27:07 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+Projeto1.exe: 00006768: 11:27:07 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+Projeto1.exe: 00006768: 11:27:07 [TUniServerModule]:HTTP Server Started on Port: 8077
+Projeto1.exe: 000059B0: 11:28:03 []:>--------------------------------------------------------------<
+Projeto1.exe: 000059B0: 11:28:03 [TUniServerModule]:Server First Init.
+Projeto1.exe: 000059B0: 11:28:03 [TUniServerModule]:Start Path = C:\Users\alan_\Desktop\projeto\Win32\Debug\
+Projeto1.exe: 000059B0: 11:28:03 [TUniServerModule]:Debug Mode = ON
+Projeto1.exe: 000059B0: 11:28:03 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+Projeto1.exe: 000059B0: 11:28:03 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+Projeto1.exe: 000059B0: 11:28:03 [TUniServerModule]:HTTP Server Started on Port: 8077

@@ -1,0 +1,24 @@
+unit uModelUnidadeMed;
+
+interface
+
+type
+  TModelUnidadeMed = class
+    private
+      FUnidadeMed: string;
+      FEnum: TEnum;
+      FAlerta   :WideString;
+    public
+      [TValidador('Unidade de Medida não preenchida')]
+      property UnidadeMed : string read FUnidadeMed write FUnidadeMed;
+
+      property enInExDl : TEnum read FEnum write FEnum;
+      property widAlerta : WideString read FAlerta write FAlerta;
+
+      function persist: Boolean;
+      function selecionar: TFDQuery;
+  end;
+
+implementation
+
+end.

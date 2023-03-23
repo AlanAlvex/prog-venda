@@ -1,0 +1,40 @@
+unit uDAOUnidadeMed;
+
+interface
+uses
+  SysUtils, uModelUnidadeMed, FireDAC.Comp.Client, uControllerConexao;
+type
+  TUnidadeMed = class
+    private
+    public
+      function selecionarCliente: TFDQuery;
+      function incluir (ModelUnidadeMed : TModelUnidadeMed): Boolean;
+      function excluir (ModelUnidadeMed : TModelUnidadeMed): Boolean;
+      function alterar (ModelUnidadeMed : TModelUnidadeMed): Boolean;
+  end;
+
+implementation
+
+{ TUnidadeMed }
+
+function TUnidadeMed.alterar(ModelUnidadeMed: TModelUnidadeMed): Boolean;
+begin
+
+end;
+
+function TUnidadeMed.excluir(ModelUnidadeMed: TModelUnidadeMed): Boolean;
+begin
+
+end;
+
+function TUnidadeMed.incluir(ModelUnidadeMed: TModelUnidadeMed): Boolean;
+begin
+
+end;
+
+function TUnidadeMed.selecionarCliente: TFDQuery;
+begin
+
+end;
+
+end.
