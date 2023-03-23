@@ -45,7 +45,6 @@ begin
   try
     try
       TControllerConexao.getInstanse.daoConexao.getConexao.StartTransaction;
-
       sSQL := ' INSERT INTO CLIENTES (NOME,CPF,CEP,ENDERECO,TELEFONE,DTNASC) '+
               ' VALUES ('+#39+ModelCliente.strNome+#39+','
                            +#39+ModelCliente.strCPF+#39+','
@@ -60,9 +59,7 @@ begin
 
       Result := True;
     except
-      if TControllerConexao.getInstanse.daoConexao.getConexao.InTransaction then
-        TControllerConexao.getInstanse.daoConexao.getConexao.Rollback;
-
+      TControllerConexao.getInstanse.daoConexao.getConexao.Rollback;
       Result := False;
     end;
   finally

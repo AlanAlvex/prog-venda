@@ -12,13 +12,13 @@ type
   TDAOCliente = class
 
     private
+
     public
       function selecionarCliente: TFDQuery;
       function incluir (ModelCliente : TModelCliente): Boolean;
       function excluir (ModelCliente : TModelCliente): Boolean;
       function alterar (ModelCliente : TModelCliente): Boolean;
   end;
-
 
 implementation
 
@@ -39,13 +39,20 @@ end;
 function TDAOCliente.incluir(ModelCliente: TModelCliente): Boolean;
 var
   qrCliente : TFDQuery;
+  sSQL : string;
 begin
   qrCliente := TControllerConexao.getInstanse.daoConexao.getQuery;
   try
     try
-      qrCliente.ExecSQL('INSERT INTO (NOME,CPF,CEP,ENDERECO,TELEFONE)'+
-                        'VALUES("'+ModelCliente.strNome+'","'+ModelCliente.strCPF+'","'+ModelCliente.strCEP+'",'
-                        +'"'+ModelCliente.strEndereco+'","'+ModelCliente.strTelefone+'")');
+      sSQL := ' INSERT INTO CLIENTES (NOME,CPF,CEP,ENDERECO,TELEFONE,DTNASC) '+
+              ' VALUES ('+#39+ModelCliente.strNome+#39+','
+                           +#39+ModelCliente.strCPF+#39+','
+                           +#39+ModelCliente.strCEP+#39+','
+                           +#39+ModelCliente.strEndereco+#39+','
+                           +#39+ModelCliente.strTelefone+#39+','
+                           +#39+DateToStr(ModelCliente.dtNasc)+#39+')';
+
+      qrCliente.ExecSQL(sSQL);
 
       Result := True;
     except

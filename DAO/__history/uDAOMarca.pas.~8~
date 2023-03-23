@@ -36,27 +36,14 @@ var
   sSQL : string;
 begin
   try
-    try
-      TControllerConexao.getInstanse.daoConexao.getConexao.StartTransaction;
+    qrMarca := TControllerConexao.getInstanse.daoConexao.getQuery;
 
-      qrMarca := TControllerConexao.getInstanse.daoConexao.getQuery;
+    sSQL := ' INSERT INTO MARCA (MARCA) '+
+            ' VALUES ('+#39+ModelMarca.Marca+#39+')';
 
-      sSQL := ' INSERT INTO MARCA (MARCA) '+
-              ' VALUES ('+#39+ModelMarca.Marca+#39+')';
+    qrMarca.ExecSQL(sSQL);
+  except
 
-      qrMarca.ExecSQL(sSQL);
-
-      TControllerConexao.getInstanse.daoConexao.getConexao.Commit;
-
-      Result := True;
-    except
-      if TControllerConexao.getInstanse.daoConexao.getConexao.InTransaction then
-        TControllerConexao.getInstanse.daoConexao.getConexao.Rollback;
-
-      Result := False;
-    end;
-  finally
-    qrMarca.Free;
   end;
 end;
 

@@ -35,20 +35,13 @@ begin
   qrUnidadeMed := TControllerConexao.getInstanse.daoConexao.getQuery;
   try
     try
-      TControllerConexao.getInstanse.daoConexao.getConexao.StartTransaction;
-
       sSQL := ' INSERT INTO UNIMEDIDA (UNIMEDIDA) '+
               ' VALUES ('+#39+ModelUnidadeMed.UnidadeMed+#39+')';
 
       qrUnidadeMed.ExecSQL(sSQL);
 
-      TControllerConexao.getInstanse.daoConexao.getConexao.Commit;
-
       Result := True;
     except
-      if TControllerConexao.getInstanse.daoConexao.getConexao.InTransaction then
-        TControllerConexao.getInstanse.daoConexao.getConexao.Rollback;
-
       Result := False;
     end;
   finally
